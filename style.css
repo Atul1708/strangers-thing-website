@@ -1,0 +1,523 @@
+/*
+ *   Copyright (c) 2022 
+ *   All rights reserved.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Bebas+Neue&family=Changa:wght@200&family=Concert+One&family=Fredoka+One&family=Handlee&family=Ibarra+Real+Nova&family=Josefin+Sans&family=Lobster&family=Mingzat&family=Oleo+Script+Swash+Caps&family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&family=Playfair+Display:wght@400;800&family=Raleway:wght@400;500&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto:wght@300;400;700&family=Secular+One&family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'cerco';
+    src: url("CercoDEMO-Bold.otf");
+}
+
+img {
+    max-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.brand-name {
+    font-family: 'cerco';
+    font-size: 26px;
+    padding: 10px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.brand-name span.active {
+    color: #f9004d;
+}
+
+.links ul {
+    display: flex;
+}
+
+.links ul li {
+    margin-right: 10px;
+    list-style: none;
+}
+
+.links ul li a {
+    font-family: 'cerco';
+    display: block;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.links ul li a:hover {
+    color: #f9004d;
+}
+
+.toggle-button {
+    display: none;
+    width: 30px;
+    height: 21px;
+    position: absolute;
+    top: .75rem;
+    right: 1.1rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container {
+    background-color: black;
+    padding: 40px;
+}
+
+.cast h1 {
+    color: white;
+    font-family: 'cerco';
+    text-align: center;
+    padding: 20px 0 0 0;
+    font-size: 44px;
+    letter-spacing: 2px;
+}
+
+.cast h1 span.active {
+    color: #f9004d;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0;
+    font-family: 'cerco';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.heading span.active {
+    color: #f9004d;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid #f9004d;
+    border-radius: 5px;
+}
+
+.photo {
+    text-align: center;
+
+}
+
+.photo img {
+    width: 50%;
+}
+
+.info {
+    width: 50%;
+    line-height: 1.4;
+}
+
+.info h1 {
+    color: #f9004d;
+    font-family: 'cerco';
+    margin-bottom: 50px;
+}
+
+.info p {
+    width: 90%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .5px;
+    word-spacing: .5px;
+}
+
+.villans {
+    color: white;
+    margin: 50px 0;
+    font-size: 44px;
+    text-align: center;
+    font-family: 'cerco';
+    letter-spacing: 2px;
+}
+
+.villans span.active {
+    color: #f9004d;
+}
+
+.lines {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 10px 0 30px 0;
+}
+
+.lines-1 {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 30px 0 10px 0;
+}
+
+.lines-2 {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 30px 0 10px 0;
+}
+
+.main-container-image {
+    background-color: black;
+    column-gap: 20px;
+}
+
+.gallery {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 30px 10px 0 10px;
+}
+
+.gallery-heading h1 {
+    text-align: center;
+    padding: 20px 0 0 0;
+    font-size: 44px;
+    letter-spacing: 2px;
+}
+
+.gallery-heading-1 h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 44px;
+    font-family: 'cerco';
+    letter-spacing: 2px;
+    color: #f9004d;
+    background-color: black;
+    mix-blend-mode: screen;
+}
+
+.image {
+    position: relative;
+    width: 400px;
+}
+
+.image:first-child {
+    position: relative;
+    width: 483px;
+}
+
+.image:last-child {
+    position: relative;
+    width: 420px;
+}
+
+
+.image__img {
+    width: 100%;
+    display: block;
+}
+
+.image__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__title {
+    font-size: 44px;
+}
+
+p.image__description {
+    margin-top: 20px;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay>* {
+    transform: translateY(20px);
+    transition: transform .25s;
+}
+
+.image__overlay:hover>* {
+    transform: translateY(0);
+}
+
+/* use this class to make background of this color put this class with image__overlay */
+.image__overlay--primary {
+    background-color: #f9004d;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__title {
+    font-size: 2em;
+    margin-top: .25em;
+}
+
+/*  */
+.gallery-1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gallery-1 .image:nth-child(1) {
+    position: relative;
+    width: 420px;
+}
+
+.gallery-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 0 10px;
+}
+
+.gallery-2 .image:nth-child(2) {
+    position: relative;
+    width: 360px;
+}
+
+.gallery-2 .image:nth-child(3) {
+    position: relative;
+    width: 440px;
+}
+
+.gallery-3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 10px;
+}
+
+.gallery-3 .image:nth-child(1) {
+    position: relative;
+    width: 400px;
+}
+footer{
+    background-color: black;
+}
+.last{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'cerco';
+}
+.last-1{
+    color:#f9004d;
+    margin:20px 0;
+    width: 50%;
+}
+.last-heading h1{
+    font-size: 40px;
+}
+.btn{
+    background-color: #f9004d;
+    width: 25%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    transform:scale(1.1);
+}
+.btn a{
+    text-decoration: none;
+    color:white;
+}
+.para p{
+    margin:20px 0;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.social-tags{
+    color:#f9004d;
+    font-size: 28px;
+    margin: 10px 0;
+}
+.social-tags:hover{
+    color:white;
+    transform: translateY(-5%);
+}
+@media (max-width:600px) {
+
+    .brand-name {
+        font-family: 'cerco';
+        font-size: 22px;
+        padding: 10px;
+        letter-spacing: 2px;
+        color: white;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .links li {
+        text-align: center;
+    }
+
+    .links li a {
+        padding: .5rem 1rem;
+    }
+
+    .links.active {
+        display: flex;
+    }
+}
+@media (max-width:600px) {
+
+    .gallery,
+    .gallery-1,
+    .gallery-2,
+    .gallery-3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .image:first-child {
+        position: relative;
+        width: 400px;
+    }
+
+    .image:last-child {
+        position: relative;
+        width: 400px;
+    }
+
+    .gallery-1 .image:nth-child(1) {
+        position: relative;
+        width: 400px;
+    }
+
+    .gallery-2 .image:nth-child(2) {
+        position: relative;
+        width: 400px;
+    }
+
+    .gallery-2 .image:nth-child(3) {
+        position: relative;
+        width: 400px;
+    }
+    .last{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .last-2{
+        display: flex;
+        justify-content: center;
+    }
+    .social-tags{
+        margin-left: 20px;
+    }
+    .btn{
+        width: 80%;
+    }
+    .last-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .para p{
+        text-align: center;
+    }
+}
+
+@media (max-width:600px) {
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid #f9004d;
+        border-radius: 5px;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info h1 {
+        text-align: center;
+    }
+
+    .info p {
+        width: 100%;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width:768px){
+    .photo {
+        text-align:left;
+    }
+    .info{
+        width:100%;
+    }
+    .btn{
+        width: 50%;
+    }
+    .image__title{
+        font-size: 22px;
+    }
+    .image__description{
+        font-size: 14px;
+    }
+}
